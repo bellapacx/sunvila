@@ -15,7 +15,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="h-[70vh] md:h-[75vh] flex flex-col-reverse lg:flex-row items-center justify-center gap-8 px-2 sm:px-6 py-4 max-w-7xl mx-auto">
+    <section className="h-[70vh] md:h-[75vh] flex flex-col-reverse lg:flex-row items-center justify-center gap-4 px-2 sm:px-6 py-4 max-w-7xl mx-auto">
       {/* Text Content - Made more compact */}
       <motion.div
         className="flex-1 text-center lg:text-left"
