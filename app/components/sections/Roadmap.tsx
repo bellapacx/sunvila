@@ -11,18 +11,7 @@ const milestones = [
   { year: '2026 Q3', title: 'Ecosystem Maturity', description: 'Full ecosystem integration and mass adoption.' },
 ];
 
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: (i: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: i * 0.25,
-      duration: 0.6,
-      ease: 'easeOut',
-    },
-  }),
-};
+
 
 const Roadmap = () => {
   return (

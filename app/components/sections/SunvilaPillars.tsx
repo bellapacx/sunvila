@@ -45,18 +45,7 @@ const pillars = [
 ];
 
 // Animation variants
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: custom * 0.15,
-      duration: 0.6,
-      ease: 'easeOut',
-    },
-  }),
-};
+
 
 
 const SunvilaPillars = () => {
