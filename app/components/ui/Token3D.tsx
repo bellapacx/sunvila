@@ -8,7 +8,7 @@ import { Suspense, useEffect, useRef } from 'react';
 export default function Token3D() {
   return (
     <Canvas
-      style={{ width: '100%', height: '400px', }}
+      style={{ width: '100%', height: '200px', }}
       camera={{ position: [0, 0, 8], fov: 45 }}
       shadows
     >

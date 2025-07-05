@@ -17,10 +17,10 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 text-sm font-medium">
-          <Link href="/" className="hover:text-white/80 transition">Home</Link>
-          <Link href="/about" className="hover:text-white/80 transition">About</Link>
-          <Link href="/roadmap" className="hover:text-white/80 transition">Roadmap</Link>
-          <Link href="/contact" className="hover:text-white/80 transition">Contact</Link>
+          <Link href="/" className="hover:text-white/80 text-lg transition">Home</Link>
+          <Link href="/about" className="hover:text-white/80 text-lg transition">About</Link>
+          <Link href="/roadmap" className="hover:text-white/80 text-lg transition">Roadmap</Link>
+          <Link href="/contact" className="hover:text-white/80 text-lg transition">Contact</Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -34,12 +34,12 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden px-6 pb-4 bg-green-700">
-          <Link href="/" className="block py-2 hover:text-white/90">Home</Link>
-          <Link href="/about" className="block py-2 hover:text-white/90">About</Link>
-          <Link href="/roadmap" className="block py-2 hover:text-white/90">Roadmap</Link>
-          <Link href="/contact" className="block py-2 hover:text-white/90">Contact</Link>
-        </div>
+      <div className="md:hidden px-6 pb-4 bg-green-700">
+  <Link href="/" className="block py-2 hover:text-white/90 text-lg">Home</Link>
+  <Link href="/about" className="block py-2 hover:text-white/90 text-lg">About</Link>
+  <Link href="/roadmap" className="block py-2 hover:text-white/90 text-lg">Roadmap</Link>
+  <Link href="/contact" className="block py-2 hover:text-white/90 text-lg">Contact</Link>
+</div>
       )}
     </header>
   );
