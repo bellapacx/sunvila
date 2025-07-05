@@ -1,4 +1,4 @@
-declare module '*.glb' {
-  const content: any;
-  export default content;
+declare module "*.glb" {
+  const value: import("three").Group;
+  export default value;
 }
