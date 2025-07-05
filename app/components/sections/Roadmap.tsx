@@ -26,7 +26,7 @@ const Roadmap = () => {
       {milestones.map(({ year, title, description }, idx) => (
         <div key={idx} className="mb-16 relative pl-20">
           {/* Number circle */}
-          <div className="absolute left-[-1.75rem] top-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-black font-bold shadow-md z-10">
+          <div className="absolute left-[-1.65rem] top-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-black font-bold shadow-md z-10">
             {idx + 1}
           </div>
 
