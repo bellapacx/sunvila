@@ -41,7 +41,7 @@ const solutions = [
 
 const ProblemSolution = () => {
   return (
-    <section className="py-10 bg-gradient-to-b from-black via-zinc-900 to-black">
+    <section className="py-8 bg-gradient-to-b from-black via-zinc-900 to-black">
   <div className="max-w-7xl mx-auto px-6 bg-gradient-to-b from-black via-zinc-900 to-black rounded-lg">
     <div className="flex flex-col lg:flex-row gap-10 items-center">
       {/* Left Text Content */}

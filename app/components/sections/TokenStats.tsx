@@ -28,7 +28,7 @@ const stats = [
 
 const TokenStats = () => {
   return (
-    <section className="py-12 bg-black text-white">
+    <section className="py-8 bg-black text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-amber-400 mb-12">Token Stats</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

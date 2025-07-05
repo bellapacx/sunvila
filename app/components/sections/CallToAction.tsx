@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 const CallToAction = () => {
   return (
-    <section className="bg-green-600 text-white py-10 px-6">
+    <section className="bg-green-600 text-white py-8 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold mb-4">Join the Sunvila Revolution</h2>
         <p className="text-lg mb-8 text-white/90">

@@ -12,7 +12,7 @@ const milestones = [
 
 const Roadmap = () => {
   return (
-    <section className="relative py-10 bg-gradient-to-b from-black via-zinc-900 to-black text-white overflow-hidden">
+    <section className="relative py-8 bg-gradient-to-b from-black via-zinc-900 to-black text-white overflow-hidden">
   {/* Right-side quote */}
   <div className="hidden lg:block absolute right-30 top-1/2 transform -translate-y-1/2 text-zinc-600 text-2xl italic max-w-sm leading-relaxed z-0">
     &quot;Empowering communities through smart systems, belief, and action — that&apos;s the Sunvila way.&quot;
