@@ -53,7 +53,7 @@ export default function HeroSection() {
 
       {/* Spline 3D model */}
       <motion.div
-        className="flex-1 w-full max-w-md h-[280px] sm:h-[240px] md:h-[400px]"
+        className="flex-1 w-full max-w-md h-[220px] sm:h-[180px] md:h-[200px]"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
