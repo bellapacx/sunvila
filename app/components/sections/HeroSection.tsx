@@ -39,7 +39,7 @@ export default function HeroSection() {
   return (
     <section
       ref={ref}
-      className="h-[70vh] md:h-[75vh] bg-gradient-to-b from-black via-zinc-900 to-black flex flex-col-reverse lg:flex-row items-center justify-center gap-4 px-2 sm:px-6 py-4 max-w-8 mx-auto relative overflow-hidden"
+      className="h-[70vh] md:h-[75vh] bg-gradient-to-b from-black via-zinc-900 to-black flex flex-col-reverse lg:flex-row items-center justify-center gap-4 px-2 sm:px-6 py-4 max-w-8xl mx-auto relative overflow-hidden"
     >
       {/* Loading spinner */}
       {!isSplineLoaded && (
