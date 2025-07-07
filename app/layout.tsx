@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'SunvilaCoin',
   description: 'Eco initiative for community transformation',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
   },
 };
 
