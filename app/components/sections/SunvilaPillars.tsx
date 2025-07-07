@@ -15,7 +15,7 @@ const pillars = [
   {
     icon: <GiTreeGrowth className="text-green-400 text-5xl mb-4" />,
     title: 'Sustainable Environment',
-    description: 'Promoting eco-friendly practices and reforestation through community engagement.',
+    description: 'Promoting eco-friendly practices and Income Generating reforestation through community engagement.',
   },
   {
     icon: <GiFactory className="text-yellow-400 text-5xl mb-4" />,

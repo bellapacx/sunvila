@@ -7,21 +7,22 @@ import { GiFactory, GiForest, GiTeamIdea } from 'react-icons/gi';
 const problems = [
   {
     icon: <GiFactory className="text-red-500 text-4xl mb-3" />,
-    title: 'Structural Problems',
+    title: 'Structural Problems Of Rural Africa',
     points: [
       'Unproductive & underserved scattered settlements',
       'Idle labour due to wrong religious orientations',
-      'Population explosion & deforestation',
+      'Population explosion coupled with wrong energy usage & deforestation',
       'Low level of productivity',
     ],
   },
   {
     icon: <GiForest className="text-yellow-500 text-4xl mb-3" />,
-    title: 'Systemic Problems',
+    title: 'Systemic Problems Of Rural Africa',
     points: [
       'Subsistence economy due to food self-reliance strategy',
       'Lack of model solution centers',
       'Prevalence of broker economy',
+      
       'Centralized planning leaving masses as messengers',
     ],
   },
