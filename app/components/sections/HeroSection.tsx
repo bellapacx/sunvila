@@ -8,6 +8,7 @@ import Button from '../ui/Button';
 
 export default function HeroSection() {
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
+ const [mode, setMode] = useState<'3d' | 'text'>('3d');
 
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, rootMargin: '-100px' });
@@ -35,6 +36,16 @@ export default function HeroSection() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.8 } },
   };
+  // Toggle between '3d' and 'text' every 5s
+  useEffect(() => {
+    if (!isSplineLoaded) return;
+
+    const interval = setInterval(() => {
+      setMode((prev) => (prev === '3d' ? 'text' : '3d'));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isSplineLoaded]);
 
   return (
     <section
@@ -86,18 +97,54 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Right 3D model */}
+      {/* Right 3D Model */}
+       <motion.div
+      className="relative flex-1 w-full max-w-md h-[160px] sm:h-[200px] md:h-[240px] lg:h-[300px]"
+      initial={{ opacity: 0, scale: 1.2 }}
+      animate={isSplineLoaded ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 1 }}
+    >
+      {/* 3D Model (rotating & fading) */}
       <motion.div
-        className="flex-1 w-full max-w-md h-[160px] sm:h-[200px] md:h-[240px] lg:h-[300px]"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={isSplineLoaded ? { opacity: 1, scale: 1 } : {}}
+        animate={{ opacity: mode === '3d' ? 1 : 0 }}
         transition={{ duration: 1 }}
+        className="absolute inset-0 w-full h-full"
       >
-        <Spline
-          scene="https://prod.spline.design/Yz51Yqd9ktGyqB1D/scene.splinecode"
-          onLoad={() => setIsSplineLoaded(true)}
-        />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+          className="w-full h-full"
+        >
+          <Spline
+            scene="https://prod.spline.design/Yz51Yqd9ktGyqB1D/scene.splinecode"
+            onLoad={() => setIsSplineLoaded(true)}
+          />
+        </motion.div>
       </motion.div>
+
+      {/* SVC Text (fades in when 3D is hidden) */}
+      <motion.div
+        animate={{ opacity: mode === 'text' ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+      >
+        <h1
+          className="text-6xl sm:text-6xl font-extrabold"
+          style={{
+            color: 'rgba(34, 197, 94, 0.4)',
+            textShadow: `
+              0 0 10px rgba(34, 197, 94, 0.6),
+              0 0 20px rgba(34, 197, 94, 0.6),
+              0 0 30px rgba(34, 197, 94, 0.8)
+            `,
+          }}
+        >
+          SVC
+        </h1>
+      </motion.div>
+    </motion.div>
+
+
     </section>
   );
 }

@@ -39,7 +39,7 @@ const TokenStats = () => {
   }, [inView, controls]);
 
   return (
-    <section className="py-16 bg-black text-white">
+    <section className="py-14 bg-black text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.h2
           className="text-4xl font-bold text-amber-400 mb-12"

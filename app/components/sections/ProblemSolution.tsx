@@ -99,17 +99,20 @@ const ProblemSolution = () => {
           </div>
 
           {/* Right Visual */}
-          <motion.div
-            className="lg:w-1/2 w-full h-96 rounded-xl bg-zinc-900 border border-zinc-700 shadow-xl flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-zinc-400 italic text-center">
-              [3D Smart Village Model Placeholder]
-            </p>
-          </motion.div>
+<motion.div
+  className="lg:w-1/2 w-full h-96 rounded-xl bg-zinc-900 border border-zinc-700 shadow-xl flex items-center justify-center overflow-hidden"
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <img
+    src="/village.PNG" // <-- Replace with your actual path
+    alt="3D Smart Village Model"
+    className="w-full h-full object-cover"
+  />
+</motion.div>
+
         </div>
       </div>
     </section>
