@@ -1,14 +1,9 @@
 // app/page.tsx
-import HeroSection from './components/sections/HeroSection';
-import ProblemSolution from './components/sections/ProblemSolution';
-import SunvilaPillars from './components/sections/SunvilaPillars';
-import TokenStats from './components/sections/TokenStats';
 import Roadmap from './components/sections/Roadmap';
 import CallToAction from './components/sections/CallToAction';
 import Hero from './components/sections/Hero';
 import ProblemWithRemittances from './components/sections/ProblemWithRemittances';
 import GdhrpSolution from './components/sections/GdhrpSolution';
-import PhasedRollout from './components/sections/PhasedRollout';
 import GDHRPModel from './components/sections/GDHRPModel';
 import GDHRPkeyfeatures from './components/sections/GDHRPkeyfeatures';
 import BenefitsByStakeholder from './components/sections/BenefitsbyStakeholder';
