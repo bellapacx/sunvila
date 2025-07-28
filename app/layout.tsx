@@ -1,27 +1,26 @@
-// app/layout.tsx
-import './globals.css';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import { Metadata } from 'next';
-
+// src/app/layout.tsx
+import './globals.css'
+import { Metadata } from 'next'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 
 export const metadata: Metadata = {
-  title: 'SunvilaCoin',
-  description: 'Eco initiative for community transformation',
+  title: 'SunvilaCoin | GDHRP Platform',
+  description: 'Turning remittances into sustainable investments and green jobs through blockchain.',
   icons: {
-    icon: '/logo.png',
-  },
-};
+    icon: '/logo.png',}
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      
-      <body className="min-h-screen bg-white text-gray-800 flex flex-col">
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+      <body className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans">
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
-  );
+  )
 }

@@ -1,74 +1,159 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
-const milestones = [
-  { year: '2025 Q3', title: 'Token Launch', description: 'Mint SunvilaCoin (SVC) and begin initial distribution.' },
-  { year: '2025 Q4', title: 'Staking & DAO', description: 'Deploy staking contracts and launch DAO governance.' },
-  { year: '2026 Q1', title: 'Smart Village Deployment', description: 'Begin physical Smart Village projects and infrastructure.' },
-  { year: '2026 Q2', title: 'Global Expansion', description: 'Expand ecosystem outreach and partnerships globally.' },
-  { year: '2026 Q3', title: 'Ecosystem Maturity', description: 'Full ecosystem integration and mass adoption.' },
+interface Milestone {
+  title: string;
+  description: string;
+  details?: string;
+}
+
+interface Quarter {
+  title: string;
+  milestones: Milestone[];
+}
+
+const quarters: Quarter[] = [
+  {
+    title: 'Q1 - Token Launch & Initial Sales',
+    milestones: [
+      {
+        title: 'Token Launch',
+        description: 'Total Supply: 1B | Circulating: 283M | Market Cap: $2.83M',
+      },
+      {
+        title: 'Private Sale',
+        description: '15% Allocation (150M tokens)',
+        details: 'TGE 25% (37.5M tokens), Cliff 1 month, 75% linear over 4 months',
+      },
+      {
+        title: 'Public Sale',
+        description: '5% Allocation (50M tokens), 100% at TGE',
+      },
+    ],
+  },
+  {
+    title: 'Q2 - Team & Advisors Vesting Starts',
+    milestones: [
+      {
+        title: 'Team Vesting',
+        description: '5% Allocation (50M tokens)',
+        details: 'Cliff 4 months, linear vesting over 2 years',
+      },
+      {
+        title: 'Advisors Vesting',
+        description: '4% Allocation (40M tokens)',
+        details: 'Cliff 3 months, linear vesting over 2 years',
+      },
+    ],
+  },
+  {
+    title: 'Q3 - Partners & KOL Vesting Begins',
+    milestones: [
+      {
+        title: 'Partners Vesting',
+        description: '3% Allocation (30M tokens)',
+        details: '15% TGE, cliff 3 months, 85% linear over 1 year',
+      },
+      {
+        title: 'KOLs Vesting',
+        description: '3% Allocation (30M tokens)',
+        details: '20% TGE, cliff 6 months, 80% linear over 2 years',
+      },
+    ],
+  },
+  {
+    title: 'Q4 - Exchange Listing & Marketing',
+    milestones: [
+      {
+        title: 'Exchange Listing',
+        description: '20% Allocation (200M tokens), 100% at listing',
+      },
+      {
+        title: 'Marketing & Community Giveaways',
+        description: '18% Allocation (180M tokens)',
+        details: 'Cliff 1 month, 100% linear vesting over 1 year',
+      },
+    ],
+  },
+  {
+    title: 'Q5 - Development & Liquidity',
+    milestones: [
+      {
+        title: 'Development & Ecosystem',
+        description: '12% Allocation (120M tokens)',
+        details: 'Cliff 3 months, 100% linear vesting over 1 year',
+      },
+      {
+        title: 'Liquidity Pool',
+        description: '15% Allocation (150M tokens)',
+        details: '20% TGE, cliff 6 months, 80% linear vesting over 2 years',
+      },
+    ],
+  },
 ];
 
-
-
-const Roadmap = () => {
+function MilestoneItem({ milestone, isOpen, onToggle }: { milestone: Milestone; isOpen: boolean; onToggle: () => void }) {
   return (
-    <section className="relative py-16 bg-gradient-to-b from-black via-zinc-900 to-black text-white overflow-hidden">
-      {/* Vertical animated timeline line */}
-      <motion.div
-        initial={{ scaleY: 0 }}
-        whileInView={{ scaleY: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="absolute left-10 top-0 bottom-0 w-1 bg-green-600 origin-top rounded"
-      />
+    <div className="mb-6">
+      <div className="flex items-center justify-between">
+        <h4 className="text-lg font-semibold text-green-900">{milestone.title}</h4>
+        {milestone.details && (
+          <button
+            onClick={onToggle}
+            aria-expanded={isOpen}
+            className="flex items-center gap-1 text-green-600 hover:text-green-800 focus:outline-none"
+          >
+            <InformationCircleIcon className="w-5 h-5" />
+            <span>{isOpen ? 'Hide details' : 'Show details'}</span>
+          </button>
+        )}
+      </div>
+      <p className="text-green-700 mt-1">{milestone.description}</p>
+      {isOpen && milestone.details && (
+        <p className="mt-2 text-green-800 bg-green-100 rounded-md p-3 whitespace-pre-wrap">{milestone.details}</p>
+      )}
+    </div>
+  );
+}
 
-      {/* Right-side quote */}
-      <motion.blockquote
-        className="hidden lg:block absolute right-10 top-1/2 transform -translate-y-1/2 text-zinc-600 text-2xl italic max-w-sm leading-relaxed z-0 select-none"
-        initial={{ opacity: 0, x: 20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
-        viewport={{ once: true }}
-      >
-        &quot;Empowering communities through smart systems, belief, and action — that&apos;s the Sunvila way.&quot;
-      </motion.blockquote>
+export default function Roadmap() {
+  const [openIndex, setOpenIndex] = useState<{ quarter: number; milestone: number } | null>(null);
 
-      {/* Main container */}
-      <div className="relative max-w-5xl mx-auto px-6 z-10">
-        <h2 className="text-4xl font-bold mb-14 text-center text-green-400">Roadmap</h2>
+  const toggleDetails = (quarterIndex: number, milestoneIndex: number) => {
+    if (openIndex && openIndex.quarter === quarterIndex && openIndex.milestone === milestoneIndex) {
+      setOpenIndex(null);
+    } else {
+      setOpenIndex({ quarter: quarterIndex, milestone: milestoneIndex });
+    }
+  };
 
-        <div className="relative border-l-4 border-green-600 pl-16">
-          {milestones.map(({ year, title, description }, idx) => (
-            <motion.div
-              key={idx}
-              className="mb-20 relative"
-              
-              initial="hidden"
-              whileInView="visible"
-              custom={idx}
-              viewport={{ once: true, margin: '-100px' }}
-            >
-              {/* Number circle */}
-              <motion.div
-                whileHover={{ scale: 1.3, boxShadow: '0 0 8px #22c55e' }}
-                className="absolute left-[-3.25rem] top-0 w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-black font-bold shadow-lg cursor-pointer select-none"
-              >
-                {idx + 1}
-              </motion.div>
+  return (
+    <section className="max-w-5xl mx-auto px-6 py-16">
+      <h2 className="text-4xl font-extrabold text-green-800 mb-12 text-center">
+        SunvilaCoin Token Launch Roadmap
+      </h2>
 
-              {/* Text content */}
-              <time className="text-green-400 font-semibold mb-1 block">{year}</time>
-              <h3 className="text-2xl font-semibold">{title}</h3>
-              <p className="text-zinc-300 mt-2 max-w-lg">{description}</p>
-            </motion.div>
-          ))}
-        </div>
+      <div className="space-y-14">
+        {quarters.map((quarter, qIdx) => (
+          <div key={qIdx}>
+            <h3 className="text-2xl font-bold text-green-900 mb-6 border-l-4 border-green-600 pl-4">
+              {quarter.title}
+            </h3>
+            <div className="pl-6 border-l-2 border-green-300">
+              {quarter.milestones.map((milestone, mIdx) => (
+                <MilestoneItem
+                  key={mIdx}
+                  milestone={milestone}
+                  isOpen={!!openIndex && openIndex.quarter === qIdx && openIndex.milestone === mIdx}
+                  onToggle={() => toggleDetails(qIdx, mIdx)}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
-};
-
-export default Roadmap;
+}
