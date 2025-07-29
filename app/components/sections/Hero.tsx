@@ -11,12 +11,14 @@ export default function Hero() {
       <GridBackground />
 
       <div className="relative z-10 max-w-5xl text-center space-y-6">
-        <h1 className="text-2xl md:text-5xl font-extrabold text-green-500 leading-tight">
-           SunvilaCoin — Empowering Communities through the Global Diaspora Homeland Reconnection Program (GDHRP)
-        </h1>
-        <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
-         We transform global remittances into tokenized sustainable investments via SunvilaCoin, empowering diaspora investors and families with passive income, green jobs, and smart village growth—breaking dependency cycles and reducing illegal immigration through economic independence.
-        </p>
+        <h1 className="text-2xl md:text-5xl font-extrabold leading-tight text-green-700 dark:text-green-400">
+  SunvilaCoin — Empowering Communities through the Global Diaspora Homeland Reconnection Program (GDHRP)
+</h1>
+
+<p className="text-xl md:text-2xl font-extrabold max-w-3xl mx-auto text-gray-700 dark:text-gray-100">
+  We transform global remittances into tokenized sustainable investments via SunvilaCoin, empowering diaspora investors and families with passive income, green jobs, and smart village growth—breaking dependency cycles and reducing illegal immigration through economic independence.
+</p>
+
         <div className="flex justify-center gap-4 pt-4">
           <Button className="shadow-lg" variant="solid">
             Join the Mission

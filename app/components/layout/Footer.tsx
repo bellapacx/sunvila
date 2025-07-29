@@ -41,10 +41,10 @@ export default function Footer() {
             </button>
           </form>
           <div className="flex space-x-4 text-xl text-zinc-400">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+            <a href="https://x.com/SunvilaCoin" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
               <FaTwitter />
             </a>
-            <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+            <a href="https://t.me/sunvilacoin1" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
               <FaTelegramPlane />
             </a>
             <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">

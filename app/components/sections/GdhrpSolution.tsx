@@ -105,6 +105,44 @@ export default function GdhrpSolution() {
                 </p>
               </div>
             </motion.div>
+
+            {/* Diaspora Coming Home */}
+            <motion.div 
+              className="flex items-start gap-4" 
+              variants={fadeUp}
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+            >
+              <motion.div variants={iconHover} className="text-green-400 cursor-pointer">
+                <LightBulbIcon className="w-10 h-10" />
+              </motion.div>
+              <div>
+                <h3 className="text-xl font-semibold text-green-100">Diaspora Coming Home</h3>
+                <p className="text-green-300 max-w-md">
+                  GDHRP incentivizes skilled diaspora professionals to return, reinvest, and build a legacy through meaningful local impact.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Youth & Local Development */}
+            <motion.div 
+              className="flex items-start gap-4" 
+              variants={fadeUp}
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+            >
+              <motion.div variants={iconHover} className="text-green-400 cursor-pointer">
+                <SparklesIcon className="w-10 h-10" />
+              </motion.div>
+              <div>
+                <h3 className="text-xl font-semibold text-green-100">Empowering the New Generation</h3>
+                <p className="text-green-300 max-w-md">
+                  By addressing the void in local community development, GDHRP helps youth see opportunity, pride, and purpose at home.
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
 

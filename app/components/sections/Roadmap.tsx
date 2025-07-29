@@ -31,6 +31,10 @@ const quarters: Quarter[] = [
         title: 'Public Sale',
         description: '5% Allocation (50M tokens), 100% at TGE',
       },
+      {
+        title: 'AI Integration',
+        description: 'Begin AI-powered analytics and community engagement tools development',
+      },
     ],
   },
   {
@@ -46,6 +50,10 @@ const quarters: Quarter[] = [
         description: '4% Allocation (40M tokens)',
         details: 'Cliff 3 months, linear vesting over 2 years',
       },
+      {
+        title: 'Market Tracker App',
+        description: 'Development and beta launch of real-time token market tracker app',
+      },
     ],
   },
   {
@@ -60,6 +68,10 @@ const quarters: Quarter[] = [
         title: 'KOLs Vesting',
         description: '3% Allocation (30M tokens)',
         details: '20% TGE, cliff 6 months, 80% linear over 2 years',
+      },
+      {
+        title: 'Web3 Wallet',
+        description: 'Launch of integrated Web3 wallet for token management and transactions',
       },
     ],
   },
@@ -94,11 +106,12 @@ const quarters: Quarter[] = [
   },
 ];
 
+
 function MilestoneItem({ milestone, isOpen, onToggle }: { milestone: Milestone; isOpen: boolean; onToggle: () => void }) {
   return (
     <div className="mb-6">
       <div className="flex items-center justify-between">
-        <h4 className="text-lg font-semibold text-green-900">{milestone.title}</h4>
+        <h4 className="text-lg font-semibold text-green-600">{milestone.title}</h4>
         {milestone.details && (
           <button
             onClick={onToggle}
@@ -110,9 +123,9 @@ function MilestoneItem({ milestone, isOpen, onToggle }: { milestone: Milestone; 
           </button>
         )}
       </div>
-      <p className="text-green-700 mt-1">{milestone.description}</p>
+      <p className="text-green-400 mt-1">{milestone.description}</p>
       {isOpen && milestone.details && (
-        <p className="mt-2 text-green-800 bg-green-100 rounded-md p-3 whitespace-pre-wrap">{milestone.details}</p>
+        <p className="mt-2 text-green-700 bg-green-100 rounded-md p-3 whitespace-pre-wrap">{milestone.details}</p>
       )}
     </div>
   );
@@ -130,15 +143,15 @@ export default function Roadmap() {
   };
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16">
-      <h2 className="text-4xl font-extrabold text-green-800 mb-12 text-center">
+    <section id='roadmap' className="max-w-5xl mx-auto px-6 py-16">
+      <h2 className="text-4xl font-extrabold text-green-600 mb-12 text-center">
         SunvilaCoin Token Launch Roadmap
       </h2>
 
       <div className="space-y-14">
         {quarters.map((quarter, qIdx) => (
           <div key={qIdx}>
-            <h3 className="text-2xl font-bold text-green-900 mb-6 border-l-4 border-green-600 pl-4">
+            <h3 className="text-2xl font-bold text-green-500 mb-6 border-l-4 border-green-600 pl-4">
               {quarter.title}
             </h3>
             <div className="pl-6 border-l-2 border-green-300">

@@ -4,7 +4,7 @@ import Button from '@/app/components/ui/Button';
 
 export default function ContactPage() {
   return (
-    <section className="min-h-[80vh] bg-black text-white px-6 py-20 max-w-5xl mx-auto">
+    <section id='contact' className="min-h-[80vh] bg-black text-white px-6 py-20 max-w-5xl mx-auto">
       <h1 className="text-4xl font-bold mb-6 text-center text-green-500">Contact Us</h1>
       <p className="text-center text-zinc-300 mb-12">
         &apos;We&apos;re here to answer your questions and explore opportunities to collaborate.&apos;

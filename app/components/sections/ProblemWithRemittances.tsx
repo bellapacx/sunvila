@@ -145,6 +145,8 @@ export default function ProblemWithRemittances() {
               "$800B+ flows annually in global remittances, yet over 90% is consumed, not invested.",
               "Families remain trapped in aid dependency, lacking sustainable income sources.",
               "High transfer fees (5–12%) drain disposable income.",
+              "Scamming Issue"
+              ,
             ]}
           />
 

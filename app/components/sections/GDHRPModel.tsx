@@ -9,6 +9,8 @@ const steps = [
     points: [
       'Diaspora members swap remittance cash for SunvilaCoin-backed investment pools (e.g., EV Taxi Fleets, Solar Farms, Agribusiness, Affordable Housing).',
       'Investments are tokenized as digital assets, ensuring transparency and liquidity.',
+      'Practical operations are led by local partners to maintain sustainability.',
+      'Local partners must be trusted, legally compliant organizations with a proven track record, strong community presence, and the operational capacity to deliver and scale impact-driven projects. They should align with GDHRP values, practice financial transparency, collaborate openly with diaspora stakeholders, and prioritize sustainability, local empowerment, and effective risk management.'
     ],
   },
   {
@@ -16,8 +18,11 @@ const steps = [
     points: [
       'Principal Protection: Investments secured in revenue-generating green projects.',
       'Dividend Sharing:',
-      '• 50% to diaspora investor (long-term wealth).',
-      '• 50% to designated relatives as startup capital (e.g., EV Taxi, Solar Kiosk, Poultry Farm).',
+     
+      '• 30% to diaspora investors for long-term wealth creation.',
+'• 25% to diaspora families as startup capital (e.g., EV Taxi, Solar Kiosk, Poultry Farm).',
+'• 30% allocated to Sunvila for program operations and scaling.',
+'• 15% retained as investment reserve for future development and projects.'
     ],
   },
   {

@@ -18,9 +18,9 @@ const steps = [
   },
   {
     number: 2,
-    title: 'Convert to SunvilaCoin',
+    title: 'Convert to CryptoCoins',
     description:
-      'Remittance cash is swapped for SunvilaCoin-backed investment pools.',
+      'Remittance cash is swapped for SunvilaCoin-backed investment pools and CryptoCoins(BTC,ETH,SOL,BNB,XRP ...).',
     icon: ArrowPathIcon,
   },
   {

@@ -7,3 +7,6 @@
   --color-secondary: #4CAF50;
   --color-accent: #A5D6A7;
 }
+html {
+  color-scheme: dark;
+}

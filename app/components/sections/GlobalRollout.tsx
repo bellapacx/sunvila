@@ -6,47 +6,49 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 const rolloutPhases = [
   {
-    id: 1,
-    title: 'Africa Diaspora Homeland Reconnection Program',
-    description:
-      'Launching pilot projects across African remittance corridors to establish foundational investments and local entrepreneurship.',
-  },
-  {
-    id: 2,
-    title: 'Asian Diaspora Homeland Reconnection Program',
-    description:
-      'Expanding to Asia, integrating local partners and regulatory frameworks.',
-  },
-  {
-    id: 3,
-    title: 'Latino Diaspora Homeland Reconnection Program',
-    description:
-      'Targeting Latin American communities for sustainable development through tokenized investments.',
-  },
-  {
-    id: 4,
-    title: 'Middle East Diaspora Homeland Reconnection Program',
-    description:
-      'Adapting to Middle Eastern financial ecosystems with tailored green projects.',
-  },
-  {
-    id: 5,
-    title: 'Europe & USA Diaspora Investment Program',
-    description:
-      'Engaging western diaspora for impact investments with transparent ROI.',
-  },
-  {
-    id: 6,
-    title: 'Rest of the World Diaspora Homeland Reconnection Program',
-    description:
-      'Covering remaining global communities with smart village initiatives.',
-  },
-  {
-    id: 7,
-    title: 'Empowering Communities to Live Proudly in Smart Villages',
-    description:
-      'Driving the fight against illegal immigration and human trafficking through sustainable local economies.',
-  },
+  id: 1,
+  title: 'Africa Diaspora Homeland Reconnection Program',
+  description:
+    'Launching pilot projects across African remittance corridors by integrating local partners to establish foundational investments and local entrepreneurship.',
+},
+{
+  id: 2,
+  title: 'Asian Diaspora Homeland Reconnection Program',
+  description:
+  'Expanding to Asia — including China, India, and Pakistan — by working with local partners and regulatory frameworks.',
+
+},
+{
+  id: 3,
+  title: 'Latino Diaspora Homeland Reconnection Program',
+  description:
+    'Targeting Latin American communities with tokenized investments and strategic integration of local partners for sustainable development.',
+},
+{
+  id: 4,
+  title: 'Middle East Diaspora Homeland Reconnection Program',
+  description:
+    'Integrating local partners to adapt green projects within Middle Eastern financial ecosystems.',
+},
+{
+  id: 5,
+  title: 'Europe & USA Diaspora Investment Program',
+  description:
+    'Engaging western diaspora for impact investments with transparent ROI, in collaboration with local partners.',
+},
+{
+  id: 6,
+  title: 'Rest of the World Diaspora Homeland Reconnection Program',
+  description:
+    'Covering remaining global communities with smart village initiatives that involve and empower local partners.',
+},
+{
+  id: 7,
+  title: 'Empowering Communities to Live Proudly in Smart Villages',
+  description:
+    'Driving the fight against illegal immigration and human trafficking through sustainable local economies, enabled by strong partnerships with local actors.',
+}
+
 ]
 
 export default function GlobalRollout() {
