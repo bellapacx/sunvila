@@ -9,19 +9,12 @@ export default function Header() {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: 'about' },
-    { label: 'Roadmap', href: 'roadmap' },
-    { label: 'Contact',href: '/contact', type: 'page' },
+    { label: 'WhitePaper', href: '/whitepaper.pdf' },
+    { label: 'About', href: '/about' },
+    { label: 'Roadmap', href: '/roadmap' },  
+    { label: 'Contact', href: '/contact' },
+     // Actual page
   ];
-
-  // Scroll smoothly to section and close menu (for mobile)
-  function handleScroll(href: string) {
-    const element = document.getElementById(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-green-700/80 text-white shadow-md">
@@ -29,7 +22,6 @@ export default function Header() {
         {/* Logo */}
         <a
           href="#home"
-          onClick={() => handleScroll('home')}
           className="text-2xl font-black tracking-tight hover:opacity-90 transition cursor-pointer"
         >
           SunvilaCoin
@@ -40,11 +32,7 @@ export default function Header() {
           {navItems.map(({ label, href }) => (
             <a
               key={href}
-              href={`#${href}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll(href);
-              }}
+              href={href}
               className="relative group transition text-white hover:text-yellow-300 cursor-pointer"
             >
               {label}
@@ -77,11 +65,8 @@ export default function Header() {
             {navItems.map(({ label, href }) => (
               <a
                 key={href}
-                href={`#${href}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScroll(href);
-                }}
+                href={href}
+                onClick={() => setIsOpen(false)}
                 className="block py-3 text-lg font-medium hover:text-yellow-400 transition cursor-pointer"
               >
                 {label}

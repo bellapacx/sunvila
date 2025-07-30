@@ -25,7 +25,7 @@ const features = [
   },
   {
     title: 'DAO Governance',
-    description: 'Diaspora investors vote on new projects and platform direction.',
+    description: 'Key Diaspora investors vote on new projects and platform direction.',
     icon: UsersIcon,
   },
 ]

@@ -72,7 +72,7 @@ export default function Tokenomics() {
         <motion.div
   className="max-w-sm mx-auto bg-green-800 bg-opacity-40 rounded-3xl p-8 shadow-2xl"
   initial={{ scale: 0.85, opacity: 0 }}
-  whileInView={{ scale: 1.5, opacity: 1 }}
+  whileInView={{ scale: 1, opacity: 1 }}
   transition={{ duration: 0.6, ease: 'easeOut' }}
 >
   <PieChart
