@@ -6,7 +6,7 @@ export function GridBackground() {
     <div className="absolute inset-0 -z-10">
       <div
         className={cn(
-          "absolute inset-0",
+          "absolute inset-0 bg-black",
           "[background-size:40px_40px]",
           "[background-image:linear-gradient(to_right,#064e3b_1px,transparent_1px),linear-gradient(to_bottom,#064e3b_1px,transparent_1px)]",
           "dark:[background-image:linear-gradient(to_right,#064e3b_1px,transparent_1px),linear-gradient(to_bottom,#064e3b_1px,transparent_1px)]"
