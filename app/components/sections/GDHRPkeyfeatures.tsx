@@ -10,7 +10,7 @@ import {
 const features = [
   {
     title: 'Remittance Swap Portal',
-    description: 'Fiat-to-SunvilaCoin gateway with under 1% fees (vs traditional 5–12%).',
+    description: 'Fiat-to-Crypto gateway with seemless fees (vs traditional 5–12%).',
     icon: CurrencyDollarIcon,
   },
   {
