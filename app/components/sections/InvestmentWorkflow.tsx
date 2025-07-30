@@ -86,7 +86,7 @@ export default function InvestmentWorkflow() {
 
             {/* Vertical line (mobile) */}
             {i < steps.length - 1 && (
-              <div className="absolute w-1 h-full bg-green-100 top-12 left-[50%] transform -translate-x-1/2 md:hidden z-0" />
+              <div className="absolute w-1 h-full bg-green-700 top-12 left-[50%] transform -translate-x-1/2 md:hidden z-[-1]" />
             )}
 
             {/* Icon */}
@@ -100,7 +100,7 @@ export default function InvestmentWorkflow() {
             </h3>
 
             {/* Description */}
-            <p className="text-green-400 text-sm leading-relaxed">{description}</p>
+            <p className="text-green-400 text-sm leading-relaxed max-w-80 ml-6">{description}</p>
           </motion.div>
         ))}
       </div>
