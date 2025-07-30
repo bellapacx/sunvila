@@ -9,7 +9,7 @@ export default function Header() {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'WhitePaper', href: '/whitepaper.pdf' },
+    { label: 'WhitePaper', href: '/Whitepaper.pdf', external: true},
     { label: 'About', href: '/about' },
     { label: 'Roadmap', href: '/roadmap' },  
     { label: 'Contact', href: '/contact' },
